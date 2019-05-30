@@ -1,4 +1,4 @@
-<?php
+<?php //declare(strict_types=1); //this line adds a strict type
 /*To creat a constant, you have to use the function "define()"
 there are three param:
 name: the name of the constant
@@ -13,7 +13,7 @@ define('couple',[
 define("Hello","Hello ");
 
 function test(){
-  echo Hello.couple[1];
+  echo Hello.couple[1]."<br>";
 }
 test();
 /* Operators
@@ -71,5 +71,45 @@ do {
 } while ($x <= 5);
 
 
+function testFunction($testName){
+  echo $testName.'<br>';
+}
 
+testFunction("Martin");
+testFunction("Clara");
+
+function addNumbers(int $a, int $b) {
+    return $a + $b;
+}
+echo addNumbers(5, "5 days");
+
+function testDefaultAdd(int $a =1,int $b = 2) {
+  $c =$a + $b;
+  return $c;
+}
+//there are three different arrays possible in PHP.
+
+//indexed array.
+
+$cars = array("Volvo", "BMW", "Toyota");
+
+echo count($cars);
+
+echo $cars[0];
+
+//associative array.
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Peter is " . $age['Peter'] . " years old.";
+
+echo count($age);
+
+
+
+/*
+the difference between get and post:
+$_GET is an array of variables passed to the current script via the URL parameters.
+
+$_POST is an array of variables passed to the current script via the HTTP POST method.
+*/
 ?>
