@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<clothes>
+  <clothe category="tshirt">
+    <title color="Blue">Blue Tshirt</title>
+    <price>14.99</price>
+  </clothe>
+  <clothe category="tshirt">
+    <title color="Green">green Tshirt</title>
+    <price>24.99</price>
+  </clothe>
+  <clothe category="pants">
+    <title color="Blue">Jeans</title>
+    <price>34.99</price>
+  </clothe>
+  <clothe category="shoes">
+    <title color="Blue">Blue shoes</title>
+    <price>44.99</price>
+  </clothe>
+</clothes>
