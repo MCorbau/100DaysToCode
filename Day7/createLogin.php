@@ -1,8 +1,10 @@
 <?php
 require 'SQLConnection.php';
-$login=$_POST["userID"];
+$conn = new mysqli($base, $username, $password,$dbName);
+$login=$_POST["testUser"];
 $password=$_POST["userPassword"];
-$sql="INSERT INTO `users` (username,password) VALUES ('$login', '$password')";
-$result = mysql_query($sql) or trigger_error(mysql_error(),E_USER_ERROR);
+$encryptPassword = md5($password);
+$sql="INSERT INTO `users` (username,password) VALUES ('$login', '$encryptPassword')";
+$result = $conn->query($sql) or trigger_error(mysql_error(),E_USER_ERROR);
 echo 'all done';
 ?>
