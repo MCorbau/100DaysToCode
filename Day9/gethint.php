@@ -1,5 +1,5 @@
 <?php
-require 'SQLConnection';
+require 'SQLConnection.php';
 $conn= new PDO("mysql:host=$base;dbname=$dbName", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // Array with names
@@ -36,15 +36,15 @@ $a[] = "Vicky";
 
 // get the q parameter from URL
 $q = $_REQUEST["q"];
-echo 'ok';
 $hint = "";
-$result = $conn->prepare("SELECT * FROM Name");
-$result->execute();
-print_r($result);
+$sql = 'select * from Name';
+foreach ($conn->query($sql) as $row) {
+  print_r( $row['Name']) . "\t";
+}
 
 
 
-
+/*
 
 // lookup all hints from array if $q is different from ""
 if ($q !== "") {
@@ -64,5 +64,5 @@ if ($q !== "") {
 }
 
 // Output "no suggestion" if no hint was found or output correct values
-echo $hint === "" ? "no suggestion" : $hint;
+echo $hint === "" ? "no suggestion" : $hint;*/
 ?>
