@@ -2,7 +2,7 @@
 <body>
 
     <!-- Navigation -->
-    <?php include('inc/navigation.php')
+    <?php include('inc/navigation.php')?>
 
     <!-- Page Content -->
     <div class="container">
